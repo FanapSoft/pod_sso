@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ssoFanapium_Example' do
+  pod 'ssoFanapium', :path => '../'
+
+  target 'ssoFanapium_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
