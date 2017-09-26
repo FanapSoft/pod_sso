@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DA6ACFDC1C66A45DDAD6D8E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0DA6ACFDC1C66A45DDAD6D8E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		22B6ED5B88CA9192F161C2E6 /* Pods_ssoFanapium_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ssoFanapium_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4190ADF5C97775625A637B0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4190ADF5C97775625A637B0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ssoFanapium_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ssoFanapium_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		C940F74C2A7A83FE7229C85E /* Pods-ssoFanapium_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssoFanapium_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ssoFanapium_Example/Pods-ssoFanapium_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D4C3095E52604143242DFE16 /* Pods-ssoFanapium_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssoFanapium_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ssoFanapium_Tests/Pods-ssoFanapium_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD6794D71CC5C37C807FEFD4 /* Pods-ssoFanapium_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ssoFanapium_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ssoFanapium_Example/Pods-ssoFanapium_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E4FDCDCFE3A88233812EB717 /* ssoFanapium.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ssoFanapium.podspec; path = ../ssoFanapium.podspec; sourceTree = "<group>"; };
+		E4FDCDCFE3A88233812EB717 /* ssoFanapium.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ssoFanapium.podspec; path = ../ssoFanapium.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +216,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -505,11 +506,16 @@
 			baseConfigurationReference = DD6794D71CC5C37C807FEFD4 /* Pods-ssoFanapium_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ssoFanapium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -519,11 +525,16 @@
 			baseConfigurationReference = C940F74C2A7A83FE7229C85E /* Pods-ssoFanapium_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ssoFanapium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
