@@ -50,12 +50,12 @@ import ssoFanapium
 let sso = SSOClass()
 
 func someFunc() {
-sso.login(	sso_address: "SSO Address",
-client_id: "Your Client Id", 
-redirect_uri: "Your custome URL scheme://", 
-state: "Some things you need after login", 
-sender: self)
-}
+    sso.login(	sso_address: "SSO Address",
+                client_id: "Your Client Id", 
+                redirect_uri: "Your custome URL scheme://", 
+                state: "Some things you need after login", 
+                sender: self)
+    }
 ```
 ### **Step 3 :** Add Observer 
 
@@ -65,15 +65,18 @@ import ssoFanapium
 let sso = SSOClass()
 
 func someFunc() {
-sso.login(	sso_address: "SSO Address",
-client_id: "Your Client Id", 
-redirect_uri: "Your custome URL scheme://", 
-state: "Some things you need after login", 
-sender: self)
+    sso.login(	sso_address: "SSO Address",
+                client_id: "Your Client Id", 
+                redirect_uri: "Your custome URL scheme://", 
+                state: "Some things you need after login", 
+                sender: self)
 
 
 
-NotificationCenter.default.addObserver(self, selector: #selector(ViewController.methodOfReceivedNotification(notification:)), name: Notification.Name("ssoLoginDidFinish"), object: nil)
+NotificationCenter.default.addObserver( self, 
+                                        selector: #selector(ViewController.methodOfReceivedNotification(notification:)), 
+                                        name: Notification.Name("ssoLoginDidFinish"),
+                                        object: nil)
 
 }
 ```
@@ -86,30 +89,32 @@ import ssoFanapium
 let sso = SSOClass()
 
 func someFunc() {
-sso.login(	sso_address: "SSO Address",
-client_id: "Your Client Id", 
-redirect_uri: "Your custome URL scheme://", 
-state: "Some things you need after login", 
-sender: self)
+    sso.login(	sso_address: "SSO Address",
+                client_id: "Your Client Id", 
+                redirect_uri: "Your custome URL scheme://", 
+                state: "Some things you need after login", 
+                sender: self)
 
 
 
-NotificationCenter.default.addObserver(self, selector: #selector(ViewController.methodOfReceivedNotification(notification:)), name: Notification.Name("ssoLoginDidFinish"), object: nil)
-
+NotificationCenter.default.addObserver( self, 
+                                        selector: #selector(ViewController.methodOfReceivedNotification(notification:)), 
+                                        name: Notification.Name("ssoLoginDidFinish"), 
+                                        object: nil)
 }
 
 func methodOfReceivedNotification(notification: Notification){
-NotificationCenter.default.removeObserver(self, name: Notification.Name("ssoLoginDidFinish"), object:nil)
+    NotificationCenter.default.removeObserver(self, name: Notification.Name("ssoLoginDidFinish"), object:nil)
 
-if notification.object as! String == "SafariViewControllerDidDismiss" {
-print ("SafariViewControllerDidDismiss")
-}else {
+    if notification.object as! String == "SafariViewControllerDidDismiss" {
+        print ("SafariViewControllerDidDismiss")
+    }else {
 
-//This Is Your SSO Code 
-//In next step you can get token from server with this code
-let code = notification.object as! String
-print(code)
-}
+        //This Is Your SSO Code 
+        //In next step you can get token from server with this code
+        let code = notification.object as! String
+        print(code)
+    }
 }
 ```
 ## Author
