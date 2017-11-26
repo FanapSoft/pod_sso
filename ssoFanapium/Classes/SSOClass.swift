@@ -37,7 +37,7 @@ public class SSOClass: NSObject, SFSafariViewControllerDelegate, UIWebViewDelega
     }
     @objc private func methodOfReceivedNotification(notification: Notification){
         let code = self.spliter(sender: (notification.object as! URL).absoluteString, separatedBy: "?code=")
-        NotificationCenter.default.removeObserver(self, name: Notification.Name("callFromWebView"), nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("callFromWebView"), object:nil)
         if #available(iOS 9.0, *) {
             (webViewTmp as! SFSafariViewController).dismiss(animated: true, completion: {
                 NotificationCenter.default.post(name: Notification.Name("ssoLoginDidFinish"), object: code.last as? String)
